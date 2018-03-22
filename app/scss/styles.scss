@@ -1,0 +1,272 @@
+@import '_shortcuts';
+@import '_variables';
+@import '_helpers';
+
+
+/* =SITE */
+body{
+  font-family: -apple-system, BlinkMacSystemFont,"Segoe UI", "Roboto", "Lato", "Helvetica", "Arial" , sans-serif !important;
+  font-size: 10px;
+  font-weight: lighter;
+
+  @media #{$tiny}{
+  	overflow-y: auto;
+  }
+
+  @media #{$desktop}{
+  	overflow: hidden;
+  }
+}
+
+/* 
+	=Misc
+*/
+.group 			  { 
+  position:relative; 
+  margin-bottom: 20px; 
+}
+input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width: 100%;;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#e9973f;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#e9973f; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#E9973F; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#E9973F; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#E9973F; }
+  to 	{ width:0; background:transparent; }
+}
+
+/* misc */
+.viewContent{
+  margin-top: 56px;
+}
+
+/* =Main */
+.bgPadrao{
+  background-color: #DB4F56;
+}
+
+.navbar{
+  .navbar-brand{
+    color: #fff;
+  }
+}
+
+
+.view{
+  .page-header{
+    text-align: center;
+    .logo{
+
+      background-size: contain;
+      background-color: #fff;
+      border-radius: 99px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      height: 120px;
+      width: 120px;
+      
+      margin: 20px 0px;
+      padding: 10px 25px;
+
+      text-indent: -9999px;
+      display: inline-block;
+    }
+  }
+}
+
+.btn{
+
+  &.btn-padrao{
+    border: 1px solid #E9973F;
+    color: #E9973F;
+
+    &:hover, &__isActive{
+      background-color: #E9973F;
+      color: #fff;
+    }
+  }
+}
+
+
+/* =Consumo */
+.consumo{
+  .orders{
+    li{
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+  }
+}
+
+
+.filter{
+  padding-bottom: 15px;
+}
+
+.orders{
+  >li{
+   position: relative;
+   min-height: 37px;
+   
+   >i{
+     font-size: 24px;
+   }
+
+   .description{
+     position: absolute;
+     padding-left: 30px;
+     top: 0px;
+    
+     >h3{
+        font-size: 16px;
+     }
+     
+     >.category{
+       display: inline-block;
+       margin-top: -20px;
+       font-size: 12px;
+     }
+   }
+  }
+}
+
+/* =Dashboard */
+.dashboard{
+
+  .nameUser{
+    font-weight: normal;
+    font-size: 12px;
+  }
+
+  .price{
+    color: $pallete2;
+    font-size: 12px;
+
+    .value{
+      font-size: 36px;
+    }
+  }
+
+}
+
+
+.section{
+
+  &__isHeader{
+    padding-bottom: 15px;
+    box-shadow: 0px 5px 5px rgba(0,0,0, 0.3);
+  }
+
+  &.extract{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+  }
+
+  .page-header{
+    .subsection{
+      font-size: 18px;
+      color: $pallete2;
+    }
+  }
+}
+
+.card{
+  padding: 10px;
+  text-align: center;
+  .price{
+    
+    margin-bottom: 0px;
+  
+    
+    &.black{
+      color: rgba(0,0,0,0.7);
+    }
+
+    .value{
+      font-size: 28px;
+    }
+  }
+}
+
+.orderList{
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+

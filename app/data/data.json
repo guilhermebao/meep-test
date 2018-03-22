@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "comida": "Salada de Frutas",
+        "tipo": "fruta",
+        "preco": 4.05
+    }, 
+    {
+        "id": 2,
+        "comida": "Salada de Frutas",
+        "tipo": "fruta",
+        "preco": 4.05
+    },
+    {
+        "id": 3,
+        "comida": "Salada de Frutas",
+        "tipo": "fruta",
+        "preco": 4.05
+    },
+    {
+        "id": 4,
+        "comida": "Salada de Frutas",
+        "tipo": "fruta",
+        "preco": 4.05
+    }
+   
+]

@@ -1,0 +1,28 @@
+<div class="view consumo">
+
+        <div class="container paddingTop30px">
+          
+            <div class="row filter">
+                <div class="col-4"><a href="#" class="btn width100percent btn-padrao ">7 dias</a></div>
+                <div class="col-4"><a href="#" class="btn width100percent btn-padrao">30 dias</a></div>
+                <div class="col-4"><a href="#" class="btn width100percent btn-padrao__isActive">60 dias</a></div>
+            </div>
+    
+            <div class="row">
+                <div class="col-12">
+                    <ul class="orders list-unstyled">
+                            <li ng-repeat="order in vm.orders" class="marginBottom10px"> 
+                                    
+                                    <i class="fa fa-lemon-o"></i> 
+                                    <div class="description"> 
+                                        <h3 class="noMarginBottom" ng-bind="order.comida"> Salada de Frutas</h3>
+                                        <span class="category" ng-bind="order.tipo">Frutas</span>
+                                    </div>
+                                    <span class="floatRight price value" ng-bind="order.preco | currency : 'R$'">R$ 4.05</span>
+                                </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,74 @@
+<div class="view dashboard">
+  
+
+    <div class="container">
+        <div class="row section__isHeader">
+            <div class="col-6 alignCenter">
+                
+                <a href="#!conta" class="displayBlock nameUser marginTop20px marginBottom5px">
+                    {{'José Maria Assis'}}
+                </a>
+                <h3 class="price">
+                    R$ <span class="value">152,88</span>
+                </h3>
+
+            </div>
+            <div class="col-6">
+                
+                <div class="row-fluid">
+                    <div class="col-sm-12 marginTop10px">
+                        <a class="btn btn-padrao width100percent" href="#!consumo" role="button">Extrato</a>
+                    </div>
+                    <div class="col-sm-12 marginTop10px">
+                        <a class="btn btn-padrao width100percent" href="#" role="button">Recarga</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="row section extract marginTop15px paddingBottom15px">
+            <div class="col-12">
+                <div class="page-header">
+                    <h1 class="subsection alignLeft">Extrato</h1>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card">
+                            <h3 class="price black">
+                                R$ <span class="value">152,88</span>
+                            </h3>
+                            <span>Total do Consumo</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card">
+                            <h3 class="price black">
+                                R$ <span class="value">5,10</span>
+                            </h3>
+                            <span>Estimativa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row section paddingTop15px">
+            <div class="col-12">
+                <div class="orderList">
+                    <ul class="noMarginBottom orders list-unstyled">
+                        <li ng-repeat="order in vm.orders" class="marginBottom10px"> 
+                            <i class="fa fa-lemon-o"></i> 
+                            <div class="description"> 
+                                <h3 class="noMarginBottom" ng-bind="order.comida"> Salada de Frutas</h3>
+                                <span class="category" ng-bind="order.tipo">Frutas</span>
+                            </div>
+                            <span class="floatRight price value" ng-bind="order.preco | currency : 'R$'">R$ 4.05</span>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
